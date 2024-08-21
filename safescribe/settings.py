@@ -140,7 +140,7 @@ REST_FRAMEWORK = {
 
 from datetime import timedelta
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(hours=6),
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=1),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
     "TOKEN_OBTAIN_SERIALIZER": "userside.serializers.MyTokenObtainPairSerializer",
 }
@@ -149,3 +149,6 @@ BASE_APP_URL = config('BASE_APP_URL')
 BASE_API_URL = config('BASE_API_URL')
 GOOGLE_OAUTH2_CLIENT_ID = config('GOOGLE_OAUTH2_CLIENT_ID')
 GOOGLE_OAUTH2_CLIENT_SECRET = config('GOOGLE_OAUTH2_CLIENT_SECRET')
+
+
+ENCRYPT_KEY = config('ENCRYPT_KEY')
